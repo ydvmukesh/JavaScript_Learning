@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul class="language">
+        <li>JavaSCript</li>
+    </ul>
+    <script>
+
+const addLang = (languageName) =>{
+    const list = document.createElement('li')
+    list.innerHTML = `${languageName}`
+    document.querySelector('.language').appendChild(list)
+
+}    
+addLang('Python')
+addLang('TypeScript')
+addLang('Java')
+
+// not need to trevers tree
+
+const addOptilanguage = (languageName) =>{
+ const list = document.createElement('li');
+// const addText = document.createTextNode(languageName)
+// li.appendChild(addText)
+  // -----or----
+ list.appendChild(document.createTextNode(languageName))
+document.querySelector('.language').appendChild(list)
+
+}
+addOptilanguage('golang')
+    </script>
+</body>
+</html>

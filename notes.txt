@@ -1,0 +1,42 @@
+1.when we use (this) in Object  then return ({}) empty object
+ const xyz = {
+
+ }
+___________________________________________________________________________
+
+2. (This) is not use in function. It is return undefined value
+
+Exp:-
+  let chai = function  (){
+   let userName = "Mukesh";
+     console.log(this.userName)
+}
+chai();
+---------------------------------------------------------
+  let chai =  () => {
+   let userName = "Mukesh";
+     console.log(this.userName)
+}
+chai();
+_______________________________________________________________________________________
+
+3. Implicit Return = when we use without {} then no need to return keyword.it is self the return value. In Implicit we use () or without ()
+
+exp:- const addTwo = (num1, num2) => (num1 + num2);
+console.log(addTwo (3,4));
+--------------------------------------------------------------------------
+
+exp:- const addTwo = (num1, num2) => ({username: "Mukesh"});
+for access object we need to use parentheses()
+_____________________________________________________________________________________________________
+
+
+5. Explicit return = when we used curly brackets {} then we need to return keyword
+
+const addTwo = (num1, num2) => {
+    return (num1 + num2)
+    
+};
+console.log(addTwo (3,4));
+
+____________________________________________________________________________________________________
