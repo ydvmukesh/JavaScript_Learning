@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <p class="first" id="first">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, sunt!</p>
+    <p class="second" id="second">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, sunt!</p>
+    <p class="third" id="third">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, sunt!</p>
+    <p class="four" id="four">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, sunt!</p>
+    <p class="five" id="five">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, sunt!</p>
+    <!-- 1. Create an index.html file and put four p elements as above: Get the first paragraph by using document.querySelector(tagname) and tag name -->
+<script>
+const first =  document.querySelector('.first')
+console.log(first);
+
+const nodeList  = document.querySelectorAll ('p')
+nodeList.forEach(para => {
+    console.log(para.textContent);
+})
+
+const fourPara = document.getElementById('four')
+fourPara.textContent = 'four para add'
+console.log(fourPara);
+
+// const newId = document.querySelectorAll('p')
+
+// newId.setAttribute('class', 'fourNew')
+// newId.setAttribute('id', 'fourID')
+// newId.id = 'newiD'
+// newId.className = 'newClass'
+// newId.forEach((parag, i)=>{
+// parag.id = 'newid'
+// parag.className = 'newClass'
+// })
+
+const allPara = document.querySelectorAll('p')
+allPara.forEach((para)=>{
+    para.style.color = 'red'
+    para.style.cssText = 'background-color:pink; border:2px solid pink;color:blue'
+})
+// ==========================
+const thirdpara = document.querySelectorAll('p')
+thirdpara.forEach((thirdpa,i)=>{
+if(i % 2 !== 0){
+    thirdpa.style.cssText = 'color:green'
+}
+else{
+    thirdpa.style.cssText = 'color:red'
+}
+})
+// ====================
+const paragraph = document.querySelectorAll('p')
+paragraph.forEach((para,index)=>{
+    para.textContent = 'paragrap' + (index + 1);
+    para.setAttribute('id', 'para' + (index + 1)) 
+   para.setAttribute('class', 'para' +(index + 1))
+})
+</script>
+</body>
+</html>
