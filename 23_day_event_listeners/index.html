@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <input type="text">
+  <button>Generate</button>
+  <ul></ul>
+<script>
+  const input = document.querySelector('input');
+  const button = document.querySelector('button');
+  const ul = document.querySelector('ul');
+
+  button.addEventListener('click', (e) => {
+    let inputValue = input.value;
+    console.log(inputValue);
+
+    for (let i = 0; i <=inputValue; i++) {
+      let li = document.createElement('li'); // create <li> element
+      li.textContent = i; // set text content to each character of input
+      ul.appendChild(li); // append <li> to <ul>
+    }
+  });
+</script>
+
+</body>
+</html>

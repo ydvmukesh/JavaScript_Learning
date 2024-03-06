@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    .container{
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 10p;
+    }
+    li{
+        list-style: none;
+        padding: 30px;
+   
+    border: 1px solid;
+    text-align: center;
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+
+    </div>
+    <script>
+        const container = document.querySelector('.container')
+        for(let i=0; i<=100; i++){
+        let numbers = document.createElement('li')
+        numbers.className = "list"
+        numbers.textContent = i
+        if(i % 2 == 0){
+            numbers.style.cssText = 'background-color:green'
+        }
+        else if(i % 2 !==0){
+            numbers.style.cssText= 'background-color:yellow'
+        }
+        container.appendChild(numbers)
+     }
+    </script>
+</body>
+</html>
